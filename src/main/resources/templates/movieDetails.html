@@ -12,13 +12,15 @@
 
 <p th:text="'Rating: '+${rating}"></p>
 
+<h3>Aktorzy:</h3>
+
 <ul>
     <li th:each="actor: ${actorList}">
         <a th:href="'/actor?id='+${actor.id}" th:text="${actor.name}+' '+${actor.surname}">Johny Depp</a>
     </li>
 </ul>
 
-<h2>Komentarze</h2>
+<h3>Komentarze:</h3>
 
 <form method="post" action="/comments/add" th:object="${comment}">
     Nick: <input type="text" th:field="*{nick}"/><br/>
